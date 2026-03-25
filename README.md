@@ -42,8 +42,8 @@ uv venv .venv
 source .venv/bin/activate  # Mac/Linux
 .venv\Scripts\activate     # Windows
 
-# Install dependencies
-uv pip install jupyterlab pandas openpyxl
+# Install dependencies from requirements.txt
+uv pip install -r requirements.txt
 
 # Launch Jupyter
 jupyter-lab
@@ -57,8 +57,8 @@ Install [Poetry](https://python-poetry.org/docs/#installation), then:
 # Initialise a new project (or use an existing pyproject.toml)
 poetry init
 
-# Add dependencies
-poetry add jupyterlab pandas openpyxl
+# Install dependencies from requirements.txt
+poetry add $(cat requirements.txt)
 
 # Launch Jupyter inside the Poetry environment
 poetry run jupyter-lab
