@@ -23,11 +23,11 @@ conda create -n acc-coding python=3.12
 # Activate it
 conda activate acc-coding
 
-# Install dependencies
-conda install jupyter pandas openpyxl
+# Install all dependencies from requirements.txt
+pip install -r requirements.txt
 
 # Launch Jupyter
-jupyter notebook
+jupyter-lab
 ```
 
 ### Option 2: uv (fast, modern — preferred)
@@ -43,10 +43,10 @@ source .venv/bin/activate  # Mac/Linux
 .venv\Scripts\activate     # Windows
 
 # Install dependencies
-uv pip install jupyter pandas openpyxl
+uv pip install jupyterlab pandas openpyxl
 
 # Launch Jupyter
-jupyter notebook
+jupyter-lab
 ```
 
 ### Option 3: Poetry
@@ -58,10 +58,10 @@ Install [Poetry](https://python-poetry.org/docs/#installation), then:
 poetry init
 
 # Add dependencies
-poetry add jupyter pandas openpyxl
+poetry add jupyterlab pandas openpyxl
 
 # Launch Jupyter inside the Poetry environment
-poetry run jupyter notebook
+poetry run jupyter-lab
 ```
 
 ## Contributing
